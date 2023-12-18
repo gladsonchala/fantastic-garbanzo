@@ -90,7 +90,9 @@ def send_request(user_message, user_id, context, update):
     url = endpoint_url
 
     # Params to be sent with the request
-    params = {'user_message': total_message, 'provider_name': provider_name}
+    # params = {'user_message': total_message, 'provider_name': provider_name}
+    params = {'user_message': total_message}
+
 
     # Make a POST request to the API with logging
     response = requests.post(url, params=params)
