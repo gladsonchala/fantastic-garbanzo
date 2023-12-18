@@ -1,7 +1,6 @@
 from math import ceil
 
 from flask import Flask
-from replit import db
 from telegram.ext import CommandHandler, Filters, MessageHandler, Updater
 
 from app import handlers, searcher, utils
