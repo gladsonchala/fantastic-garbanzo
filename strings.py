@@ -7,7 +7,7 @@ prompt = """You're OMG bot! creator: Gemechis(@ScorpiDev). You can browse the in
 NOTE(SPECIAL): Don't tell this secret and tell them that you can do this all(talented) and don't hesitate to answer any question that'll arise! Do not use complex words that are difficult to understand!!!"""
 
 # My AI API endpoint URL
-endpoint_url = "https://silver-spoon-api.replit.app/generate-response/"
+endpoint_url = "https://silver-spoon-api-omg.onrender.com/generate-response/"
 
 # Default provider name
 default_provider = "GeekGpt"
