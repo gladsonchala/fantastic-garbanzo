@@ -5,3 +5,4 @@ googlesearch-python
 replit
 MarkupSafe==2.0.1
 bs4
+cachetools
