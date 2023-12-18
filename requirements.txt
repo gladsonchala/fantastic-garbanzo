@@ -1,0 +1,7 @@
+python-telegram-bot==13.3
+Flask
+urllib3==1.26.6
+googlesearch-python
+replit
+MarkupSafe==2.0.1
+bs4
