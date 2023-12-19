@@ -1,9 +1,8 @@
 from telegram import ChatAction, Update
 from telegram.ext import CallbackContext
 
-
 from app.searcher import google_search, send_request, send_request_with_search
-from app.utils import get_search_state, latest_key, logger, get_user_info
+from app.utils import link_from_text, get_search_state, latest_key, logger, get_user_info
 from strings import default_provider, helpmsg, admin_id, admin_ids, user_provider_preferences
 from WebScrape import WebScraper
 from cachetools import TTLCache
@@ -154,9 +153,8 @@ def link_handler(update, context):
 
   # Extract the link from the user's message
   user_message = update.message.text
-  if user_message.startswith("/link "):
-    url = user_message[len("/link "):].strip()
-
+  url = link_from_text(user_message)
+  if url:
     # Perform link scraping using WebScraper
     context.bot.send_chat_action(chat_id=user_id, action=ChatAction.TYPING)
     link_scraper = WebScraper(url)
