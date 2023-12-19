@@ -159,7 +159,7 @@ def link_handler(update, context):
     context.bot.send_chat_action(chat_id=user_id, action=ChatAction.TYPING)
     link_scraper = WebScraper(url)
     scraped_text = link_scraper.scrape_visible_text()
-    urlScrapedData = "Link: " + url + "\nThe Webpage Data" + scraped_text
+    urlScrapedData = "user_message: " + user_message + "Link: " + url + "\nThe Webpage Data" + scraped_text
 
     # Send the scraped text to the AI request
     ai_response = send_request(urlScrapedData, user_id, context, update)
