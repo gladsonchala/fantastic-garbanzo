@@ -93,7 +93,7 @@ def send_request(user_message, user_id, context, update):
     # params = {'user_message': total_message, 'provider_name': provider_name}
     params = {'user_message': total_message}
 
-
+    time.sleep(2)
     # Make a POST request to the API with logging
     response = requests.post(url, params=params)
     context.bot.send_chat_action(chat_id=user_id, action=ChatAction.TYPING)
